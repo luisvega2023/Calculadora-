@@ -44,10 +44,12 @@
     .resultado {
       position: relative;
       margin: 20px;
-      height: 720px;
+      min-height: 300px;
+      height: auto;
       font-weight: bold;
       background-color: lightblue;
       overflow: hidden;
+      overflow-y: auto;
       box-shadow: 5px 5px 5px #0E2F5C;
       border-radius: 15px;
     }
@@ -84,7 +86,7 @@
         .resultado{
             position: absolute;
             z-index: 1;
-            height: 700px;
+            height: auto;
         }
         .box1{
             z-index: 0;
