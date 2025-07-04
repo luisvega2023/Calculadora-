@@ -1,12 +1,35 @@
 function calcularSueldo() {
       const categoria = document.getElementById("categoria").value;
+      const mes = document.getElementById("mes").value;
       const sindicato = document.getElementById("sindicato").checked;
       const antiguedadinput = parseFloat(document.getElementById("antiguedad").value || 0);
-      const basico = parseFloat(document.getElementById("basico").value) || 0;
       const horasnoc = parseFloat(document.getElementById("hsnoc").value) || 0;
       const hs50 = parseFloat(document.getElementById("hs50").value) || 0;
       const hs100 = parseFloat(document.getElementById("hs100").value) || 0;
       const feriados = parseFloat(document.getElementById("feriados").value) || 0;
+
+      // validacion de mes
+      let viatico
+      let sumnorem
+      let basico
+      if (mes == "junio"){
+        basico = 711370;
+        viatico = 429750;
+        sumnorem = 26280;
+      } else if ( mes == "julio"){
+        basico = 745030;
+        viatico = 435580;
+        sumnorem = 25000;
+      } else if ( mes == "agosto"){
+        basico = 751735;
+        viatico = 443216;
+        sumnorem = 50000;
+      } else if ( mes == "septiembre"){
+        basico = 808600;
+        viatico = 448800;
+        sumnorem = 0;
+      }
+
 
       // validacion de categoria
       let adicional
@@ -28,14 +51,14 @@ function calcularSueldo() {
       const nocturnas = horasnoc * (valornoct + (valornoct * antiguedad)) ;
       const totalHs50 = hs50 * (valorhs50 + (valorhs50 * antiguedad));
       const totalHs100 = hs100 * (valorhs100 + (valorhs100 * antiguedad)); 
+      console.log(valorhs100)
+      console.log(valorhs50)
 
       // Calcuca
 
       const totalant = basico * antiguedad;
-      const viatico = 435580;
-      const sumnorem = 25000;
       const totalFeriado = (basico + Presentismo + sumnorem + adicional + totalant) / 25 * feriados;
-      const totalA = basico + nocturnas + totalHs50 + totalHs100 + totalant + totalFeriado + Presentismo + adicional + sumnorem;
+      const totalA = basico + nocturnas + adicional + totalHs50 + totalHs100 + sumnorem  + Presentismo + totalFeriado + totalant;
 
       // Descuentos
       const jubilacion = totalA * 0.11;
