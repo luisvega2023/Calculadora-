@@ -1,0 +1,78 @@
+    body {
+      font-family: serif;
+      margin: 20px;
+      background-color: lightblue;
+      background-image: url(planta.png);
+      background-size: cover;
+    }
+    button:hover{
+      background-color: #93f384;
+    }
+    button {
+      font-size: 17px;
+      background-color: #20d0d8;
+      width: 150px;
+      height: 50px;
+      border-radius: 7px;
+    }
+    h1 {
+      text-align: center;
+      color:;
+    }
+    label, input {
+      display: block;
+      margin: 10px 0;
+    
+    }
+    label{
+        color: #333;
+    }
+    input[type="number"],select {
+      width: 200px;
+      margin: 0px;
+      padding: 0px;
+      background-color: #20d0d8;
+      border-radius: 6px;
+    }
+    fieldset{
+      border: 2px solid #20d0d8;
+    }
+    .logo_1{
+      width: 100px;
+      border-radius: 50%;
+      box-shadow: 5px 5px 5px black;
+    }
+    .resultado {
+      position: relative;
+      margin: 20px;
+      height: 720px;
+      font-weight: bold;
+      background-color: lightblue;
+      overflow: hidden;
+      box-shadow: 5px 5px 5px #0E2F5C;
+      border-radius: 15px;
+    }
+    .contenedor {
+      display: flex;
+      justify-content: center;
+      height: 800px;
+    }
+    .box1 {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin: 15px;
+      padding: 15px;
+      background-color: #D2FFF2;
+      width: 300px;
+      height: 100%;
+      box-shadow: 5px 5px 5px #0E2F5C;
+      border: 1px solid #D2FFF2;
+      border-radius: 15px;
+    }
+    @media (max-width: 600px){
+        body{
+            font-size: 14px;
+        }
+    }
