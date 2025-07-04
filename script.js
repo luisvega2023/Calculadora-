@@ -11,23 +11,31 @@ function calcularSueldo() {
       // validacion de categoria
       let adicional
       if (categoria == "monitoreo") {
-        adicional = 49582.49
+        adicional = (760240 - basico);
       } else if (categoria == "encargado") {
-        adicional = 98000
+        adicional = (809050 - basico);
       } else {
         adicional = 0
       }
 
-      // Calcuca
-      const antiguedad = antiguedadinput / 100
-      const nocturnas = horasnoc * (702.22 + (702.22 * antiguedad)) ;
-      const totalHs50 = hs50 * (6487.28 + (6487.28 * antiguedad));
-      const totalHs100 = hs100 * (8649.70 + (8649.70 * antiguedad)); 
-      const totalant = basico * antiguedad;
-      const NoRem = 429750;
+      // Calculo horas
+      const antiguedad = antiguedadinput / 100;
       const Presentismo = 153600;
-      const totalFeriado = (basico + Presentismo + 26280) / 25 * feriados;
-      const totalA = basico + nocturnas + totalHs50 + totalHs100 + totalant + totalFeriado + Presentismo + adicional + 26280;
+      const horasnormal = (basico + Presentismo)/200;
+      const valorhs50 = horasnormal + (horasnormal * 0.50);
+      const valorhs100 = horasnormal + horasnormal;
+      const valornoct = basico * 0.001;
+      const nocturnas = horasnoc * (valornoct + (valornoct * antiguedad)) ;
+      const totalHs50 = hs50 * (valorhs50 + (valorhs50 * antiguedad));
+      const totalHs100 = hs100 * (valorhs100 + (valorhs100 * antiguedad)); 
+
+      // Calcuca
+
+      const totalant = basico * antiguedad;
+      const viatico = 429750;//435580
+      const sumnorem = 26280;//25000
+      const totalFeriado = (basico + Presentismo + 26280 + adicional + totalant) / 25 * feriados;
+      const totalA = basico + nocturnas + totalHs50 + totalHs100 + totalant + totalFeriado + Presentismo + adicional + sumnorem;
 
       // Descuentos
       const jubilacion = totalA * 0.11;
@@ -38,9 +46,9 @@ function calcularSueldo() {
       //Validacion de sindicato.
       let total
       if (sindicato) {
-        total = totalA + NoRem - totalDescuento - descsindi;
+        total = totalA + viatico - totalDescuento - descsindi;
       } else {
-        total = totalA + NoRem - totalDescuento;
+        total = totalA + viatico - totalDescuento;
       }
       // redondeo
       
@@ -52,7 +60,7 @@ function calcularSueldo() {
         <p>Horas nocturnas: $${nocturnas.toFixed(2)}</p>
         <p>Horas 50%: $${totalHs50.toFixed(2)}</p>
         <p>Horas 100%: $${totalHs100.toFixed(2)}</p>
-        <p>Adicional REM Seguridad: $26.280</p>
+        <p>Adicional REM Seguridad: $${sumnorem}</p>
         <p>AD por Presentismo: $${Presentismo}</p>
         <p>Plus categoria: $${adicional}</p>
         <p>Feriados Trabajados: $${totalFeriado.toFixed(2)}</p>
