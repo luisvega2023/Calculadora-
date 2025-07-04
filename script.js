@@ -32,9 +32,9 @@ function calcularSueldo() {
       // Calcuca
 
       const totalant = basico * antiguedad;
-      const viatico = 429750;//435580
-      const sumnorem = 26280;//25000
-      const totalFeriado = (basico + Presentismo + 26280 + adicional + totalant) / 25 * feriados;
+      const viatico = 435580;
+      const sumnorem = 25000;
+      const totalFeriado = (basico + Presentismo + sumnorem + adicional + totalant) / 25 * feriados;
       const totalA = basico + nocturnas + totalHs50 + totalHs100 + totalant + totalFeriado + Presentismo + adicional + sumnorem;
 
       // Descuentos
