@@ -47,7 +47,7 @@ function calcularSueldo() {
       document.getElementById("resultado").innerHTML = `
         <img src="https://www.informatique-mania.com/wp-content/uploads/2020/12/Meme-Faces-2.jpg" alt="imagen" style="position: absolute; opacity:0.2; width: 100%; height: 100%;object-fit: cover; top: 0; left: 0; z-index: 0;">
         <div style="margin: 20px; position: relative;z-index: 1">
-        <span class="cerrar">&times;</span>
+        <span class="cerrar">X</span>
         <p>Sueldo Básico: $${basico.toFixed(2)}</p>
         <p>Horas nocturnas: $${nocturnas.toFixed(2)}</p>
         <p>Horas 50%: $${totalHs50.toFixed(2)}</p>
