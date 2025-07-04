@@ -17,7 +17,6 @@
     }
     h1 {
       text-align: center;
-      color:;
     }
     label, input {
       display: block;
@@ -70,6 +69,12 @@
       box-shadow: 5px 5px 5px #0E2F5C;
       border: 1px solid #D2FFF2;
       border-radius: 15px;
+    }
+    .cerrar {
+    position: absolute;
+    top: 10px; right: 15px;
+    font-size: 24px;
+    cursor: pointer;
     }
     @media (max-width: 600px){
         body{
