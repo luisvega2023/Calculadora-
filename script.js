@@ -12,31 +12,41 @@ function calcularSueldo() {
       let viatico
       let sumnorem
       let basico
+      let plus1
+      let plus2
       if (mes == "junio"){
         basico = 711370;
         viatico = 429750;
         sumnorem = 26280;
+            plus1 = 760240
+            plus2 = 809050
       } else if ( mes == "julio"){
         basico = 745030;
         viatico = 435580;
         sumnorem = 25000;
+            plus1 = 795690
+            plus2 = 846230
       } else if ( mes == "agosto"){
         basico = 751735;
         viatico = 443216;
         sumnorem = 50000;
+            plus1 = 804220
+            plus2 = 856570
       } else if ( mes == "septiembre"){
         basico = 808600;
         viatico = 448800;
         sumnorem = 0;
+            plus1 = 861600
+            plus2 = 914100
       }
 
 
       // validacion de categoria
       let adicional
       if (categoria == "monitoreo") {
-        adicional = (760240 - basico);
+        adicional = (plus1 - basico);
       } else if (categoria == "encargado") {
-        adicional = (809050 - basico);
+        adicional = (plus2 - basico);
       } else {
         adicional = 0
       }
