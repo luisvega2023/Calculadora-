@@ -36,6 +36,42 @@
     fieldset{
       border: 2px solid #20d0d8;
     }
+    .checkbox-contenedor{
+      margin-top: 5px;
+      display: flex;
+    }
+    .custom-checkbox{
+      display: none;
+    }
+    .custom-label{
+      display: inline-block;
+      margin-left: 10px;
+      width: 15px;
+      height: 15px;
+      background-color: white;
+      border: 2px solid gray;
+      border-radius: 7px;
+      cursor: pointer;
+      position: relative;
+    }
+    .custom-checkbox:checked + .custom-label {
+      background-color: #93f384;
+    }
+    .custom-label::after {
+      content: '';
+      position:absolute;
+      width: 2px;
+      height: 7px;
+      border: solid black;
+      border-width: 0 2px 2px 0;
+      transform: rotate(45deg);
+      top: 2px;
+      left: 6px;
+      display: none;
+    }
+    .custom-checkbox:checked + .custom-label::after{
+      display:block;
+    }
     .logo_1{
       width: 100px;
       border-radius: 50%;
