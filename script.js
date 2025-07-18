@@ -44,9 +44,9 @@ function calcularSueldo() {
       // validacion de categoria
       let adicional
       if (categoria == "monitoreo") {
-        adicional = plus1 - basico;
+        adicional = basico * 0.0697;
       } else if (categoria == "encargado") {
-        adicional = plus2 - basico;
+        adicional = basico * 0.1397;
       } else {
         adicional = 0
       }
@@ -95,7 +95,7 @@ function calcularSueldo() {
         <p>Horas 100%: $${totalHs100.toFixed(2)}</p>
         <p>Adicional REM Seguridad: $${sumnorem}</p>
         <p>AD por Presentismo: $${Presentismo}</p>
-        <p>Plus categoria: $${adicional}</p>
+        <p>Plus categoria: $${adicional.toFixed(2)}</p>
         <p>Feriados Trabajados: $${totalFeriado.toFixed(2)}</p>
         <p>Total S/Viatico.: $${totalA.toFixed(2)}</p>
         <p><strong>Descuentos</strong></p>
