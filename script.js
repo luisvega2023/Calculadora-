@@ -82,6 +82,7 @@ function calcularSueldo() {
         total = totalA + viatico - totalDescuento - descsindi;
       } else {
         total = totalA + viatico - totalDescuento;
+        descsindi = 0
       }
       // redondeo
       
