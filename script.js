@@ -68,7 +68,7 @@ function calcularSueldo() {
 
       const totalant = basico * antiguedad;
       const totalFeriado = (basico + Presentismo + sumnorem + adicional + totalant) / 25 * feriados;
-      const totalA = basico + nocturnas + adicional + totalHs50 + totalHs100 + sumnorem  + Presentismo + totalFeriado + totalant;
+      const totalA = basico + nocturnas + adicional + totalHs50 + totalHs100 + Presentismo + totalFeriado + totalant;
 
       // Descuentos
       const jubilacion = totalA * 0.11;
@@ -79,13 +79,12 @@ function calcularSueldo() {
       //Validacion de sindicato.
       let total
       if (sindicato) {
-        total = totalA + viatico - totalDescuento - descsindi;
+        total = totalA - totalDescuento - descsindi + viatico + sumnorem;
       } else {
-        total = totalA + viatico - totalDescuento;
+        total = totalA  - totalDescuento + viatico + sumnorem;
             descsindi = 0;
       }
-      // redondeo
-      
+      //suma de no remunerativo
       document.getElementById("resultado").innerHTML = `
         <img src="https://www.informatique-mania.com/wp-content/uploads/2020/12/Meme-Faces-2.jpg" alt="imagen" style="position: absolute; opacity:0.2; width: 100%; height: 100%;object-fit: cover; top: 0; left: 0; z-index: 0;">
         <div style="margin: 20px; position: relative;z-index: 1">
