@@ -93,7 +93,7 @@ function calcularSueldo() {
         <p>Horas nocturnas: $${nocturnas.toFixed(2)}</p>
         <p>Horas 50%: $${totalHs50.toFixed(2)}</p>
         <p>Horas 100%: $${totalHs100.toFixed(2)}</p>
-        <p>Adicional REM Seguridad: $${sumnorem}</p>
+        <p>Adicional NO REM Seguridad: $${sumnorem}</p>
         <p>AD por Presentismo: $${Presentismo}</p>
         <p>Plus categoria: $${adicional.toFixed(2)}</p>
         <p>Feriados Trabajados: $${totalFeriado.toFixed(2)}</p>
