@@ -74,7 +74,7 @@ function calcularSueldo() {
       const jubilacion = totalA * 0.11;
       const ley19032 = totalA * 0.03;
       const obrasocial = totalA * 0.03;
-      let descsindi = totalA * 0.03 + totalA * 0.01;
+      let descsindi = totalA * 0.03;
       const totalDescuento = jubilacion + ley19032 + obrasocial;
       //Validacion de sindicato.
       let total
@@ -102,7 +102,7 @@ function calcularSueldo() {
         <p>Jubilacion: $${jubilacion.toFixed(2)}</p>
         <p>Ley19032: $${ley19032.toFixed(2)}</p>
         <p>Obra Social: $${obrasocial.toFixed(2)}</p>
-        <p>Descuentos sindicato y Cuota de solidaridad: $${descsindi.toFixed(2)}</p>
+        <p>Descuentos sindicato: $${descsindi.toFixed(2)}</p>
         <p><strong>Total a cobrar: $${total.toFixed(2)}</strong></p>
         </div>
       `;
