@@ -52,30 +52,29 @@ function calcularSueldo() {
       }
 
       // Calculo horas
-      const antiguedad = antiguedadinput / 100;
+      const antiguedad = basico * ( antiguedadinput / 100 );
       const Presentismo = 153600;
-      const horasnormal = (basico + Presentismo)/200;
+      const horasnormal = (basico + antiguedad + Presentismo)/200;
       const valorhs50 = horasnormal + (horasnormal * 0.50);
       const valorhs100 = horasnormal + horasnormal;
-      const valornoct = basico * 0.001;
-      const nocturnas = horasnoc * (valornoct + (valornoct * antiguedad)) ;
-      const totalHs50 = hs50 * (valorhs50 + (valorhs50 * antiguedad));
-      const totalHs100 = hs100 * (valorhs100 + (valorhs100 * antiguedad)); 
-      console.log(valorhs100)
+      const valornoct = (basico + antiguedad) * 0.001;
+      const nocturnas = horasnoc * valornoct;
+      const totalHs50 = hs50 * valorhs50;
+      const totalHs100 = hs100 * valorhs100; 
+      console.log(antiguedad)
       console.log(valorhs50)
 
       // Calcuca
-
-      const totalant = basico * antiguedad;
-      const totalFeriado = (basico + Presentismo + sumnorem + adicional + totalant) / 25 * feriados;
-      const totalA = basico + nocturnas + adicional + totalHs50 + totalHs100 + Presentismo + totalFeriado + totalant;
+      const totalFeriado = (basico + antiguedad + Presentismo + sumnorem) / 25 * feriados;
+      const totalA = basico + nocturnas + adicional + totalHs50 + totalHs100 + Presentismo + totalFeriado + antiguedad;
 
       // Descuentos
       const jubilacion = totalA * 0.11;
       const ley19032 = totalA * 0.03;
       const obrasocial = totalA * 0.03;
+      const oSocialAcuerdos = sumnorem * 0.03;
       let descsindi = totalA * 0.03;
-      const totalDescuento = jubilacion + ley19032 + obrasocial;
+      const totalDescuento = jubilacion + ley19032 + obrasocial + oSocialAcuerdos;
       //Validacion de sindicato.
       let total
       if (sindicato) {
@@ -91,23 +90,29 @@ function calcularSueldo() {
         <span class="cerrar">&times;</span>
         <p>Sueldo Básico: $${basico.toFixed(2)}</p>
         <p>Horas nocturnas: $${nocturnas.toFixed(2)}</p>
+        <p>Adicional Servicio: $${adicional}</p>
         <p>Horas 50%: $${totalHs50.toFixed(2)}</p>
         <p>Horas 100%: $${totalHs100.toFixed(2)}</p>
-        <p>Adicional NO REM Seguridad: $${sumnorem}</p>
         <p>AD por Presentismo: $${Presentismo}</p>
-        <p>Plus categoria: $${adicional.toFixed(2)}</p>
         <p>Feriados Trabajados: $${totalFeriado.toFixed(2)}</p>
-        <p>Total S/Viatico.: $${totalA.toFixed(2)}</p>
-        <p><strong>Descuentos</strong></p>
+        <p>antiguedad: $${antiguedad}</p>
+
+        <h3><strong>Descuentos</strong></h3>
         <p>Jubilacion: $${jubilacion.toFixed(2)}</p>
         <p>Ley19032: $${ley19032.toFixed(2)}</p>
         <p>Obra Social: $${obrasocial.toFixed(2)}</p>
+        <p>O. Social Acuerdos: $${oSocialAcuerdos.toFixed(2)}</p>
         <p>Descuentos sindicato: $${descsindi.toFixed(2)}</p>
-        <p><strong>Total a cobrar: $${total.toFixed(2)}</strong></p>
+
+        <h3>No Remunerativo</h3>
+        <p>Viatico: $${viatico}</p>
+        <p>Adicional NO REM Seguridad: $${sumnorem}</p>
+        <h1> NETO: $${total.toFixed(2)}</h1>
         </div>
       `;
        document.querySelector(".cerrar").addEventListener("click", function() {
     document.getElementById("resultado").innerHTML = "";
     });
+    }
     }
    
