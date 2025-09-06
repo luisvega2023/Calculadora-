@@ -114,5 +114,5 @@ function calcularSueldo() {
     document.getElementById("resultado").innerHTML = "";
     });
     }
-    }
+
    
