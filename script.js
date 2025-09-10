@@ -88,26 +88,108 @@ function calcularSueldo() {
         <img src="https://www.informatique-mania.com/wp-content/uploads/2020/12/Meme-Faces-2.jpg" alt="imagen" style="position: absolute; opacity:0.2; width: 100%; height: 100%;object-fit: cover; top: 0; left: 0; z-index: 0;">
         <div style="margin: 20px; position: relative;z-index: 1">
         <span class="cerrar">&times;</span>
-        <p>Sueldo Básico: $${basico.toFixed(2)}</p>
-        <p>Horas nocturnas: $${nocturnas.toFixed(2)}</p>
-        <p>Adicional Servicio: $${adicional}</p>
-        <p>Horas 50%: $${totalHs50.toFixed(2)}</p>
-        <p>Horas 100%: $${totalHs100.toFixed(2)}</p>
-        <p>AD por Presentismo: $${Presentismo}</p>
-        <p>Feriados Trabajados: $${totalFeriado.toFixed(2)}</p>
-        <p>antiguedad: $${antiguedad}</p>
-
-        <h3><strong>Descuentos</strong></h3>
-        <p>Jubilacion: $${jubilacion.toFixed(2)}</p>
-        <p>Ley19032: $${ley19032.toFixed(2)}</p>
-        <p>Obra Social: $${obrasocial.toFixed(2)}</p>
-        <p>O. Social Acuerdos: $${oSocialAcuerdos.toFixed(2)}</p>
-        <p>Descuentos sindicato: $${descsindi.toFixed(2)}</p>
-
-        <h3>No Remunerativo</h3>
-        <p>Viatico: $${viatico}</p>
-        <p>Adicional NO REM Seguridad: $${sumnorem}</p>
-        <h1> NETO: $${total.toFixed(2)}</h1>
+        <table>
+        <tr>
+          <th colspan="4">Recibo de Sueldo</th>
+        </tr>
+        <tr>
+          <th>CONCEPTO</th>
+          <th>Hab. C/Desc.</th>
+          <th>Hab. S/Desc.</th>
+          <th>Deducciones</th>
+        </tr>
+        <tr>
+          <td>SUELDO MENSUAL</td>
+          <td>$${basico}</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>ADICIONAL H NOCT NORM</td>
+          <td>$${nocturnas}</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>ADICIONAL SERVICIO</td>
+          <td>$${adicional}</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>HORAS AL 50% SEGURIDAD</td>
+          <td>$${totalHs50.toFixed(2)}</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>AD POR PRESENTISMO</td>
+          <td>$${Presentismo}</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>ANTIGUEDAD</td>
+          <td>$${antiguedad}</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>JUBILACION</td>
+          <td></td>
+          <td></td>
+          <td>$${jubilacion.toFixed(2)}</td>
+        </tr>
+        <tr>
+          <td>LEY 19032</td>
+          <td></td>
+          <td></td>
+          <td>$${ley19032.toFixed(2)}</td>
+        </tr>
+        <tr>
+          <td>OBRA SOCIAL</td>
+          <td></td>
+          <td></td>
+          <td>$${obrasocial.toFixed(2)}</td>
+        </tr>
+        <tr>
+          <td>O.SOCIAL ACUERDOS</td>
+          <td></td>
+          <td></td>
+          <td>$${oSocialAcuerdos}</td>
+        </tr>
+        <tr>
+          <td>APORTE SINDICAL</td>
+          <td></td>
+          <td></td>
+          <td>$${descsindi.toFixed(2)}</td>
+        </tr>
+        <tr>
+          <td>VIATICOS</td>
+          <td></td>
+          <td>$${viatico}</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>SUMA NO REMUNERATIVA - AC</td>
+          <td></td>
+          <td>$${sumnorem}</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>TOTALES</td>
+          <td>$${totalA.toFixed(2)}</td>
+          <td>$${totalA.toFixed(2)}</td>
+          <td>$${totalDescuento.toFixed(2)}</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>NETO</td>
+          <td>$${total.toFixed(2)}</td>
+        </tr>
+        </table>
+	<img src="XOsX.gif" alt="archivo.gif" width="500px" style="margin: auto">
         </div>
       `;
        document.querySelector(".cerrar").addEventListener("click", function() {
