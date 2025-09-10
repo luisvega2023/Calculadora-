@@ -40,6 +40,15 @@
       margin-top: 5px;
       display: flex;
     }
+    table{
+      border-collapse: collapse;
+    }
+    td,th{
+      border: 1px solid black;
+    }
+    th{
+      background-color: #20d0d8;
+    }
     .custom-checkbox{
       display: none;
     }
