@@ -106,7 +106,7 @@ function calcularSueldo() {
         </tr>
         <tr>
           <td>ADICIONAL H NOCT NORM</td>
-          <td>$${nocturnas}</td>
+          <td>$${nocturnas.toFixed(2)}</td>
           <td></td>
           <td></td>
         </tr>
