@@ -112,7 +112,7 @@ function calcularSueldo() {
         </tr>
         <tr>
           <td>ADICIONAL SERVICIO</td>
-          <td>$${adicional}</td>
+          <td>$${adicional.toFixed(2)}</td>
           <td></td>
           <td></td>
         </tr>
@@ -130,7 +130,7 @@ function calcularSueldo() {
         </tr>
         <tr>
           <td>ANTIGUEDAD</td>
-          <td>$${antiguedad}</td>
+          <td>$${antiguedad.toFixed(2)}</td>
           <td></td>
           <td></td>
         </tr>
@@ -156,7 +156,7 @@ function calcularSueldo() {
           <td>O.SOCIAL ACUERDOS</td>
           <td></td>
           <td></td>
-          <td>$${oSocialAcuerdos}</td>
+          <td>$${oSocialAcuerdos.toFixed(2)}</td>
         </tr>
         <tr>
           <td>APORTE SINDICAL</td>
