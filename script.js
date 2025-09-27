@@ -12,33 +12,44 @@ function calcularSueldo() {
       let viatico
       let sumnorem
       let basico
-      let plus1
-      let plus2
+	  let Presentismo
       if (mes == "junio"){
         basico = 711370;
+		Presentismo = 153600;
         viatico = 429750;
         sumnorem = 26280;
-        plus1 = 760240;
-        plus2 = 809050;
       } else if ( mes == "julio"){
         basico = 745030;
+		Presentismo = 153600;
         viatico = 435580;
         sumnorem = 25000;
-        plus1 = 795690;
-        plus2 = 846230;
       } else if ( mes == "agosto"){
         basico = 751735;
+		Presentismo = 153600;
         viatico = 443216;
         sumnorem = 50000;
-        plus1 = 804220;
-        plus2 = 856570;
       } else if ( mes == "septiembre"){
         basico = 808600;
+		Presentismo = 153600;
         viatico = 448800;
         sumnorem = 0;
-        plus1 = 861600;
-        plus2 = 914100;
-      }
+      } else if ( mes == "octubre"){
+		basico = 817500;
+		Presentismo = 159600;
+		viatico = 473800;
+		sumnorem = 0;
+	  } else if ( mes == "noviembre"){
+	  	basico = 825600;
+		Presentismo = 159600;
+		viatico = 473800;
+		sumnorem = 0;
+	  } else if ( mes == "diciembre"){
+	  	basico = 833600;
+		Presentismo = 159600;
+		viatico = 473800;
+		sumnorem = 25000;
+	  }
+		
 
 
       // validacion de categoria
@@ -53,7 +64,6 @@ function calcularSueldo() {
 
       // Calculo horas
       const antiguedad = basico * ( antiguedadinput / 100 );
-      const Presentismo = 153600;
       const horasnormal = (basico + antiguedad + Presentismo)/200;
       const valorhs50 = horasnormal + (horasnormal * 0.50);
       const valorhs100 = horasnormal + horasnormal;
