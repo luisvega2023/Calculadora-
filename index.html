@@ -9,7 +9,7 @@
 <body>
   <div class="contenedor">
     <div class="box1">
-    <img src="https://www.informatique-mania.com/wp-content/uploads/2020/12/Meme-Faces-2.jpg" class="logo_1">
+    <img src="OIP.webp" class="logo_1">
     <h1>Calculadora de Recibo de Sueldo</h1>
     <fieldset>
       <legend>Datos</legend>
@@ -27,9 +27,6 @@
       <option value="julio">Julio</option>
       <option value="agosto">Agosto</option>
       <option value="septiembre">Septiembre</option>
-      <option value="octubre">Octubre</option>
-      <option value="noviembre">Noviembre</option>
-      <option value="diciembre">Diciembre</option>
     </select>
 
     <label for="basico">Antiguedad:</label>
@@ -53,13 +50,17 @@
     <label for="sindicato" class="custom-label"></label>
     </div>
 
-    <button onclick="calcularSueldo()">Calcular Sueldo</button>
+    <button class= "button-1" onclick="calcularSueldo()">Calcular Sueldo</button>
     </fieldset>
+    <label>Acuerdo Salarial OCT-DIC-2025</label>
+    <a href="ACTA-ACUERDO-SALARIAL-OCT-DIC-2025.pdf">
+    <button class="button-2">Descargar PDF</button>
+    </a>
     </div>
         <div class="resultado" id="resultado"></div>
+
   </div>
 
   <script src="script.js"></script>
 </body>
 </html>
-

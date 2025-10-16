@@ -1,19 +1,22 @@
     body {
       font-family: serif;
       margin: 20px;
-      background-color: lightblue;
-      background-image: url(planta.png);
+      background-color: #E7F2EF;
+      background-image: url(planta.jpg);
       background-size: cover;
     }
     button:hover{
-      background-color: #93f384;
+      background-color: #96A78D;
     }
-    button {
+    button{
+      background-color: #19183B;
+      color: white;
+      border-radius: 7px;
+    }
+    .button-1 {
       font-size: 17px;
-      background-color: #20d0d8;
       width: 150px;
       height: 50px;
-      border-radius: 7px;
     }
     h1 {
       text-align: center;
@@ -30,15 +33,12 @@
       width: 200px;
       margin: 0px;
       padding: 0px;
-      background-color: #20d0d8;
+      background-color: #19183B;
       border-radius: 6px;
+      color: white;
     }
     fieldset{
-      border: 2px solid #20d0d8;
-    }
-    .checkbox-contenedor{
-      margin-top: 5px;
-      display: flex;
+      border: 2px solid #19183B;
     }
     table{
       border-collapse: collapse;
@@ -47,7 +47,12 @@
       border: 1px solid black;
     }
     th{
-      background-color: #20d0d8;
+      background-color: #19183B;
+      color: white;
+    }
+    .checkbox-contenedor{
+      margin-top: 5px;
+      display: flex;
     }
     .custom-checkbox{
       display: none;
@@ -92,7 +97,7 @@
       min-height: 300px;
       height: auto;
       font-weight: bold;
-      background-color: lightblue;
+      background-color: #708993;
       overflow: hidden;
       overflow-y: auto;
       box-shadow: 5px 5px 5px #0E2F5C;
@@ -110,11 +115,11 @@
       align-items: center;
       margin: 15px;
       padding: 15px;
-      background-color: #D2FFF2;
+      background-color: #A1C2BD;
       width: 300px;
       height: 100%;
-      box-shadow: 5px 5px 5px #0E2F5C;
-      border: 1px solid #D2FFF2;
+      box-shadow: 5px 5px 5px #19183B;
+      border: 1px solid #19183B;
       border-radius: 15px;
     }
     .cerrar {
@@ -149,6 +154,5 @@
         img{
           width: 300px;
         }
-
 
     }
