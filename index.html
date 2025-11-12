@@ -78,8 +78,8 @@
         input.addEventListener('input', () => {
             const valor = parseFloat(input.value);
             if (!isNaN(valor)) {
-                const valor = valor/2
-                resultado.textContent = valor - (valor * 0.17) ;
+                const mitad = valor/2
+                resultado.textContent = mitad - (mitad * 0.17) ;
             } else {
                 resultado.textContent = 0;
             }
@@ -89,6 +89,7 @@
   <script src="script.js"></script>
 </body>
 </html>
+
 
 
 
