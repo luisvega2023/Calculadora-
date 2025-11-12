@@ -59,8 +59,13 @@
       <legend>Aguinaldo <strong style="color: red">EN PRUEBA</strong></legend>
       <label for="bruto">Mayor salario bruto</label>
       <input type="number" id="numero" placeholder="Escribe tu mayor sueldo">
-      <label for="feriados">Sindicato:</label>
-      <input type="checkbox" id="sindicato-a" class="custom-checkbox" />
+      
+      <div class="checkbox-contenedor">
+      <label for="sindicato1">Sindicato:</label>
+      <input type="checkbox" id="sindicato1" class="custom-checkbox" />
+      <label for="sindicato1" class="custom-label"></label>
+      </div>
+      
       <p>Resultado: <span id="resultado-a">0</span></p>
     </fieldset>
     <label>Acuerdo Salarial OCT-DIC-2025</label>
@@ -76,7 +81,7 @@
 <script>
         const input = document.getElementById('numero');
         const resultado = document.getElementById('resultado-a');
-        const sindicato1 = document.getElementById("sindicato-a").checked;
+        const sindicato1 = document.getElementById("sindicato1").checked;
 
         input.addEventListener('input', () => {
             const valor = parseFloat(input.value);
@@ -94,6 +99,7 @@
   <script src="script.js"></script>
 </body>
 </html>
+
 
 
 
