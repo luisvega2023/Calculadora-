@@ -77,28 +77,36 @@
 
   </div>
 
-  
-<script>
-        const input = document.getElementById('numero');
-        const resultado = document.getElementById('resultado-a');
-        const sindicato1 = document.getElementById("sindicato1").checked;
+ <script>
+  const input = document.getElementById('numero');
+  const resultado = document.getElementById('resultado-a');
+  const sindicatoCheckbox = document.getElementById("sindicato1");
 
-        input.addEventListener('input', () => {
-            const valor = parseFloat(input.value);
-            const mitad = valor/2;
-            if (!isNaN(valor) && sindicato1 ) {
-                resultado.textContent = mitad - (mitad * 0.17) ;
-            } else if (!isNaN(valor)) {
-                resultado.textContent = mitad - (mitad * 0.14);
-            } else {
-                resultado.textContent = 0;
-            }  
-        });
-  </script>
+  function calcular() {
+    const valor = parseFloat(input.value);
+    const sindicato1 = sindicatoCheckbox.checked;
+    const mitad = valor / 2;
+
+    if (!isNaN(valor)) {
+      if (sindicato1) {
+        resultado.textContent = (mitad - (mitad * 0.17)).toFixed(2);
+      } else {
+        resultado.textContent = (mitad - (mitad * 0.14)).toFixed(2);
+      }
+    } else {
+      resultado.textContent = 0;
+    }
+  }
+
+  // Escuchar cambios tanto en el input como en el checkbox
+  input.addEventListener('input', calcular);
+  sindicatoCheckbox.addEventListener('change', calcular);
+</script>
 
   <script src="script.js"></script>
 </body>
 </html>
+
 
 
 
