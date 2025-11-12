@@ -32,7 +32,7 @@
       <option value="diciembre">Diciembre</option> 
     </select>
 
-    <label for="basico">Antiguedad:</label>
+    <label for="antiguedad">Antiguedad:</label>
     <input type="number" id="antiguedad" />
 
     <label for="hs50">Horas Nocturnas:</label>
@@ -55,6 +55,12 @@
 
     <button class= "button-1" onclick="calcularSueldo()">Calcular Sueldo</button>
     </fieldset>
+    <fieldset>
+      <legend>Aguinaldo <strong style="color: red">EN PRUEBA</strong></legend>
+      <label for="bruto">Mayor salario bruto</label>
+      <input type="number" id="numero" placeholder="Escribe tu mayor sueldo">
+      <p>Resultado: <span id="resultado-a">0</span></p>
+    </fieldset>
     <label>Acuerdo Salarial OCT-DIC-2025</label>
     <a href="ACTA-ACUERDO-SALARIAL-OCT-DIC-2025.pdf">
     <button class="button-2">Descargar PDF</button>
@@ -63,6 +69,21 @@
         <div class="resultado" id="resultado"></div>
 
   </div>
+
+  
+<script>
+        const input = document.getElementById('numero');
+        const resultado = document.getElementById('resultado-a');
+
+        input.addEventListener('input', () => {
+            const valor = parseFloat(input.value);
+            if (!isNaN(valor)) {
+                resultado.textContent = valor/2 - (valor * 0.17) ;
+            } else {
+                resultado.textContent = 0;
+            }
+        });
+  </script>
 
   <script src="script.js"></script>
 </body>

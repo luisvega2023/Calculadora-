@@ -75,7 +75,8 @@ function calcularSueldo() {
       console.log(valorhs50)
 
       // Calcuca
-      const totalFeriado = (basico + antiguedad + Presentismo + sumnorem) / 25 * feriados;
+      const totalFeriado = (basico + antiguedad + Presentismo + adicional) / 25 * feriados;
+      const totalNoRem = viatico + sumnorem; 
       const totalA = basico + nocturnas + adicional + totalHs50 + totalHs100 + Presentismo + totalFeriado + antiguedad;
 
       // Descuentos
@@ -88,9 +89,9 @@ function calcularSueldo() {
       //Validacion de sindicato.
       let total
       if (sindicato) {
-        total = totalA - totalDescuento - descsindi + viatico + sumnorem;
+        total = totalA - totalDescuento - descsindi + totalNoRem;
       } else {
-        total = totalA  - totalDescuento + viatico + sumnorem;
+        total = totalA  - totalDescuento + totalNoRem;
             descsindi = 0;
       }
       //suma de no remunerativo
@@ -135,6 +136,12 @@ function calcularSueldo() {
         <tr>
           <td>AD POR PRESENTISMO</td>
           <td>$${Presentismo}</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>FERIADOS TRABAJADOS</td>
+          <td>$${totalFeriado.toFixed(2)}</td>
           <td></td>
           <td></td>
         </tr>
@@ -189,7 +196,7 @@ function calcularSueldo() {
         <tr>
           <td>TOTALES</td>
           <td>$${totalA.toFixed(2)}</td>
-          <td>$${totalA.toFixed(2)}</td>
+          <td>$${totalNoRem.toFixed(2)}</td>
           <td>$${totalDescuento.toFixed(2)}</td>
         </tr>
         <tr>
@@ -205,6 +212,7 @@ function calcularSueldo() {
        document.querySelector(".cerrar").addEventListener("click", function() {
     document.getElementById("resultado").innerHTML = "";
     });
+    alert("La manera en la que se calcula el feriado en esta calculadora, no es la correcta. pero por motivos de tal empresa...");
     }
 
    
