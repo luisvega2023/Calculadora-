@@ -48,6 +48,11 @@ function calcularSueldo() {
 		Presentismo = 159600;
 		viatico = 473800;
 		sumnorem = 25000;
+	  } else if ( mes == "enero"){
+	  	basico = 833600;
+		Presentismo = 159600;
+		viatico = 473800;
+		sumnorem = 25000;
 	  }
 		
 
