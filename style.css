@@ -1,15 +1,20 @@
+    :root{
+      --color-primario: #C8F4F9;
+      --background-input: #1CA7A6;
+      --buttom: #FF6F61;
+    }
     body {
       font-family: serif;
       margin: 20px;
       background-color: #E7F2EF;
-      background-image: url(planta.jpg);
+      background-image: url(planta.png);
       background-size: cover;
     }
     button:hover{
-      background-color: #96A78D;
+      background-color: #FF8F7C;
     }
     button{
-      background-color: #19183B;
+      background-color: var(--buttom);
       color: white;
       border-radius: 7px;
     }
@@ -33,12 +38,12 @@
       width: 200px;
       margin: 0px;
       padding: 0px;
-      background-color: #19183B;
+      background-color: var(--background-input);
       border-radius: 6px;
       color: white;
     }
     fieldset{
-      border: 2px solid #19183B;
+      border: 2px solid var(--background-input);
     }
     table{
       border-collapse: collapse;
@@ -47,7 +52,7 @@
       border: 1px solid black;
     }
     th{
-      background-color: #19183B;
+      background-color: var(--background-input);
       color: white;
     }
     .checkbox-contenedor{
@@ -97,7 +102,7 @@
       min-height: 300px;
       height: auto;
       font-weight: bold;
-      background-color: #708993;
+      background-color: var(--color-primario);
       overflow: hidden;
       overflow-y: auto;
       box-shadow: 5px 5px 5px #0E2F5C;
@@ -116,11 +121,11 @@
       align-items: center;
       margin: 15px;
       padding: 15px;
-      background-color: #A1C2BD;
+      background-color: var(--color-primario);
       width: 300px;
       height: 100%;
-      box-shadow: 5px 5px 5px #19183B;
-      border: 1px solid #19183B;
+      box-shadow: 5px 5px 5px var(--background-input);
+      border: 1px solid var(--background-input);
       border-radius: 15px;
     }
     .cerrar {

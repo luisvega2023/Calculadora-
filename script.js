@@ -126,7 +126,7 @@ function calcularSueldo() {
       }
       //suma de no remunerativo
       document.getElementById("resultado").innerHTML = `
-        <img src="OIP.webp" alt="imagen" style="position: absolute; opacity:0.2; width: 100%; height: 100%;object-fit: cover; top: 0; left: 0; z-index: 0;">
+        <img src="OIP.png" alt="imagen" style="position: absolute; opacity:0.2; width: 100%; height: 100%;object-fit: cover; top: 0; left: 0; z-index: 0;">
         <div style="margin: 20px; position: relative;z-index: 1">
         <span style="color: red"class="cerrar">&times;</span>
         <table>
