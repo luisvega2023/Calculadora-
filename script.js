@@ -12,47 +12,72 @@ function calcularSueldo() {
       let viatico
       let sumnorem
       let basico
-	  let Presentismo
-      if (mes == "junio"){
-        basico = 711370;
-		Presentismo = 153600;
-        viatico = 429750;
-        sumnorem = 26280;
-      } else if ( mes == "julio"){
-        basico = 745030;
-		Presentismo = 153600;
-        viatico = 435580;
-        sumnorem = 25000;
-      } else if ( mes == "agosto"){
-        basico = 751735;
-		Presentismo = 153600;
-        viatico = 443216;
-        sumnorem = 50000;
-      } else if ( mes == "septiembre"){
-        basico = 808600;
-		Presentismo = 153600;
-        viatico = 448800;
-        sumnorem = 0;
-      } else if ( mes == "octubre"){
-		basico = 817500;
-		Presentismo = 159600;
-		viatico = 473800;
-		sumnorem = 0;
+	    let Presentismo
+    if (mes == "junio"){
+      basico = 711370;
+		  Presentismo = 153600;
+      viatico = 429750;
+      sumnorem = 26280;
+    } else if ( mes == "julio"){
+      basico = 745030;
+		  Presentismo = 153600;
+      viatico = 435580;
+      sumnorem = 25000;
+    } else if ( mes == "agosto"){
+      basico = 751735;
+		  Presentismo = 153600;
+      viatico = 443216;
+      sumnorem = 50000;
+    } else if ( mes == "septiembre"){
+      basico = 808600;
+		  Presentismo = 153600;
+      viatico = 448800;
+      sumnorem = 0;
+    } else if ( mes == "octubre"){
+		  basico = 817500;
+		  Presentismo = 159600;
+		  viatico = 473800;
+		  sumnorem = 0;
 	  } else if ( mes == "noviembre"){
 	  	basico = 825600;
-		Presentismo = 159600;
-		viatico = 473800;
-		sumnorem = 0;
+		  Presentismo = 159600;
+		  viatico = 473800;
+		  sumnorem = 0;
 	  } else if ( mes == "diciembre"){
 	  	basico = 833600;
-		Presentismo = 159600;
-		viatico = 473800;
-		sumnorem = 25000;
+		  Presentismo = 159600;
+		  viatico = 473800;
+		  sumnorem = 25000;
 	  } else if ( mes == "enero"){
-	  	basico = 833600;
-		Presentismo = 159600;
-		viatico = 473800;
-		sumnorem = 25000;
+	  	basico = 867200;
+		  Presentismo = 165000;
+		  viatico = 473800;
+		  sumnorem = 10000;
+	  }else if ( mes == "febrero"){
+	  	basico = 876000;
+		  Presentismo = 165000;
+		  viatico = 473800;
+		  sumnorem = 25000;
+	  }else if ( mes == "marzo"){
+	  	basico = 884800;
+		  Presentismo = 165000;
+		  viatico = 473800;
+		  sumnorem = 25000;
+	  }else if ( mes == "abril"){
+	  	basico = 893650;
+		  Presentismo = 165000;
+		  viatico = 480500;
+		  sumnorem = 25000;
+	  }else if ( mes == "Mayo"){
+	  	basico = 902600;
+		  Presentismo = 165000;
+		  viatico = 487000;
+		  sumnorem = 30000;
+	  }else if ( mes == "junio"){
+	  	basico = 911650;
+		  Presentismo = 165600;
+		  viatico = 498000;
+		  sumnorem = 70000;
 	  }
 		
 
