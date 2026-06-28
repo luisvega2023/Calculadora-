@@ -48,27 +48,27 @@ function calcularSueldo() {
 		  Presentismo = 159600;
 		  viatico = 473800;
 		  sumnorem = 25000;
-	  } else if ( mes == "enero"){
+	  } else if ( mes == "enero26"){
 	  	basico = 867200;
 		  Presentismo = 165000;
 		  viatico = 473800;
 		  sumnorem = 10000;
-	  }else if ( mes == "febrero"){
+	  }else if ( mes == "febrero26"){
 	  	basico = 876000;
 		  Presentismo = 165000;
 		  viatico = 473800;
 		  sumnorem = 25000;
-	  }else if ( mes == "marzo"){
+	  }else if ( mes == "marzo26"){
 	  	basico = 884800;
 		  Presentismo = 165000;
 		  viatico = 473800;
 		  sumnorem = 25000;
-	  }else if ( mes == "abril"){
+	  }else if ( mes == "abril26"){
 	  	basico = 893650;
 		  Presentismo = 165000;
 		  viatico = 480500;
 		  sumnorem = 25000;
-	  }else if ( mes == "mayo"){
+	  }else if ( mes == "mayo26"){
 	  	basico = 902600;
 		  Presentismo = 165000;
 		  viatico = 487000;
