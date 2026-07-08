@@ -1,13 +1,13 @@
     :root{
-      --color-primario: #C8F4F9;
-      --background-input: #1CA7A6;
-      --buttom: #FF6F61;
+      --color-primario: #eaf4ff;
+      --background-input: #FFFFFF;
+      --buttom: #3b82f6;
     }
     body {
       font-family: serif;
       margin: 20px;
       background-color: #E7F2EF;
-      background-image: url(planta.png);
+      background-image: url(../img/Fondo.jpeg);
       background-size: cover;
     }
     button:hover{
@@ -40,7 +40,7 @@
       padding: 0px;
       background-color: var(--background-input);
       border-radius: 6px;
-      color: white;
+      color: #1f2937;
     }
     fieldset{
       border: 2px solid var(--background-input);
