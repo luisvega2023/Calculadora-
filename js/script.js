@@ -223,13 +223,13 @@ function calcularSueldo() {
           <td>$${sumnorem}</td>
           <td></td>
         </tr>
-        <tr>
+        <tr style="background-color: white">
           <td>TOTALES</td>
           <td>$${totalA.toFixed(2)}</td>
           <td>$${totalNoRem.toFixed(2)}</td>
           <td>$${totalDescuento.toFixed(2)}</td>
         </tr>
-        <tr>
+        <tr style="background-color: white">
           <td></td>
           <td></td>
           <td>NETO</td>
