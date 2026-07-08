@@ -53,7 +53,7 @@
     }
     th{
       background-color: var(--background-input);
-      color: white;
+      color: black;
     }
     .checkbox-contenedor{
       margin-top: 5px;

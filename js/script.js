@@ -126,7 +126,7 @@ function calcularSueldo() {
       }
       //suma de no remunerativo
       document.getElementById("resultado").innerHTML = `
-        <img src="OIP.png" alt="imagen" style="position: absolute; opacity:0.2; width: 100%; height: 100%;object-fit: cover; top: 0; left: 0; z-index: 0;">
+        <img src="../img/Logo.jpeg" alt="imagen" style="position: absolute; opacity:0.2; width: 100%; height: 100%;object-fit: cover; top: 0; left: 0; z-index: 0;">
         <div style="margin: 20px; position: relative;z-index: 1">
         <span style="color: red"class="cerrar">&times;</span>
         <table>
@@ -236,13 +236,13 @@ function calcularSueldo() {
           <td>$${total.toFixed(2)}</td>
         </tr>
         </table>
-	<img src="XOsX.gif" alt="archivo.gif" width="500px" style="margin: auto">
+	        <img src="../img/puglie-pug.gif" alt="archivo.gif" width="200px" style="margin: auto">
         </div>
       `;
        document.querySelector(".cerrar").addEventListener("click", function() {
     document.getElementById("resultado").innerHTML = "";
     });
-    alert("La manera en la que se calcula el feriado en esta calculadora, no es la correcta. pero por motivos de tal empresa...");
+    alert("Lo que calcule la calculadora no es algo que se deberia tomar como ejemplo, es un aproximado.");
     }
 
    
