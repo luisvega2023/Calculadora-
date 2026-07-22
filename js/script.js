@@ -78,6 +78,31 @@ function calcularSueldo() {
 		  Presentismo = 165600;
 		  viatico = 498000;
 		  sumnorem = 70000;
+	  }else if ( mes == "julio26"){
+	  	basico = 1001300;
+		  Presentismo = 180000;
+		  viatico = 505500;
+		  sumnorem = 20000;
+	  }else if ( mes == "agosto26"){
+	  	basico = 1020300;
+		  Presentismo = 180000;
+		  viatico = 514500;
+		  sumnorem = 30000;
+	  }else if ( mes == "septiembre26"){
+	  	basico = 1037600;
+		  Presentismo = 180000;
+		  viatico = 524000;
+		  sumnorem = 50000;
+	  }else if ( mes == "octubre26"){
+	  	basico = 1053200;
+		  Presentismo = 180000;
+		  viatico = 534000;
+		  sumnorem = 60000;
+	  }else if ( mes == "noviembre26"){
+	  	basico = 1069000;
+		  Presentismo = 180000;
+		  viatico = 545000;
+		  sumnorem = 70000;
 	  }
 		
 
@@ -126,7 +151,7 @@ function calcularSueldo() {
       }
       //suma de no remunerativo
       document.getElementById("resultado").innerHTML = `
-        <img src="../img/Logo.jpeg" alt="imagen" style="position: absolute; opacity:0.2; width: 100%; height: 100%;object-fit: cover; top: 0; left: 0; z-index: 0;">
+        <img src="./img/Logo.jpeg" alt="imagen" style="position: absolute; opacity:0.2; width: 100%; height: 100%;object-fit: cover; top: 0; left: 0; z-index: 0;">
         <div style="margin: 20px; position: relative;z-index: 1">
         <span style="color: red"class="cerrar">&times;</span>
         <table>
@@ -236,7 +261,7 @@ function calcularSueldo() {
           <td>$${total.toFixed(2)}</td>
         </tr>
         </table>
-	        <img src="../img/puglie-pug.gif" alt="archivo.gif" width="200px" style="margin: auto">
+	        <img src="./img/puglie-pug.gif" alt="archivo.gif" width="200px" style="margin: auto">
         </div>
       `;
        document.querySelector(".cerrar").addEventListener("click", function() {
